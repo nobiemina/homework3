@@ -51,15 +51,15 @@ function validatefirstname()
   {
   let x = document.getElementById("firstname").value;
   if( x.length<2) { 
-    document.getElementById("name_message").innerHTML = "Name needs to contain at least 2 characters";  
+    document.getElementById("fname_message").innerHTML = "Name needs to contain at least 2 characters";  
     error_flag = 1;
     }
   else {
     if (x.match(/[a-zA-Z2-5'-]+$/.test(x))) {
-    document.getElementById("name_message").innerHTML = "";  
+    document.getElementById("fname_message").innerHTML = "";  
     }
       else  {
-        document.getElementById("name_message").innerHTML = "Invalid characters in Field.";
+        document.getElementById("fname_message").innerHTML = "Invalid characters in Field.";
         error_flag = 1;
       }
     }
@@ -70,10 +70,10 @@ function validateMI()
     let x = document.getElementById("middleinit").value;
     if( x.length>0) { 
       if (x.match(/[a-zA-Z ]/.test(x))) {
-      document.getElementById("name_message").innerHTML = "";  
+      document.getElementById("MI_message").innerHTML = "";  
       }
       else  {
-        document.getElementById("name_message").innerHTML = "Invalid characters in Field.";
+        document.getElementById("MI_message").innerHTML = "Invalid characters in Field.";
         error_flag = 1;
       }
     }
@@ -83,15 +83,15 @@ function validatelastname()
   {
     let x = document.getElementById("lastname").value;
     if( x.length<2) { 
-      document.getElementById("name_message").innerHTML = "Name needs to contain at least 2 characters.";
+      document.getElementById("lname_message").innerHTML = "Name needs to contain at least 2 characters.";
       error_flag = 1;  
       }
     else {
       if (x.match(/[a-zA-Z3-5'-]+$/)) {
-      document.getElementById("name_message").innerHTML = "";  
+      document.getElementById("lname_message").innerHTML = "";  
       }
       else  {
-        document.getElementById("name_message").innerHTML = "Invalid characters in name.";
+        document.getElementById("lname_message").innerHTML = "Invalid characters in name.";
         error_flag = 1;
       }
     }
