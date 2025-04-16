@@ -69,7 +69,7 @@ Description: This is the patient registration for Medical Connect -->
                     title="Minumum 2 characters; only letters, spaces, &quot-&quot and ' allowed."
                     required
                     onblur="validatefirstname()"
-                    oninput="validatefirstname()"
+                    onfocus="validatefirstname()"
                     oninvalid="this.setCustomValidity('Required Field')"
                     placeholder="First Name"
             >
@@ -82,6 +82,7 @@ Description: This is the patient registration for Medical Connect -->
                     pattern="[A-Za-z ]{0,}"
                     placeholder="MI"
                     onblur="validateMI()"
+                    onfocus="validateMI()"
                     oninput= "validateMI()"
             >
 
@@ -94,15 +95,12 @@ Description: This is the patient registration for Medical Connect -->
                     required
                     onblur="validatelastname()"
                     oninvalid="this.setCustomValidity('Required Field')"
-                    oninput="validatelastname()"
+                    onfocus="validatelastname()"
                     pattern="[A-Za-z-2-5]{0,}"
                     placeholder="Last Name"
             >
-
-        
         </td>
-    </tr> 
-
+    </tr>
     <tr class="form">
             <td>&nbsp</td><td id="fname_message">&nbsp</td>
         </tr>
@@ -198,8 +196,8 @@ Description: This is the patient registration for Medical Connect -->
                     required
                     onfocus="validateaddr1()"
                     onblur="validateaddr1()"
+                    oninput="validateaddr1()"
                     oninvalid="this.setCustomValidity('Required Field')"
-                    oninput="this.setCustomValidity('')"
                     placeholder="Address Line 1"
             >
         <span id="addr1_text"></td>
@@ -217,9 +215,9 @@ Description: This is the patient registration for Medical Connect -->
                     maxlength="30" 
                     id="addr2" 
                     name="addr2"
-                     onfocus="validateaddr2()"
+                    onfocus="validateaddr2()"
                     oninvalid="this.setCustomValidity('At least 1 address line Required')"
-                    oninput="this.setCustomValidity('')"
+                    oninput="validateaddr2()"
                     placeholder="Address Line 2"
             >
         <span id="addr2_text"></td>
@@ -239,7 +237,7 @@ Description: This is the patient registration for Medical Connect -->
                     required
                     onblur="validatecity()"
                     oninvalid="this.setCustomValidity('Required Field')"
-                    oninput="this.setCustomValidity('')"
+                    oninput="validatecity()"
                     placeholder="City"
             >
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; State* &nbsp;&nbsp;&nbsp;
