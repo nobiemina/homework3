@@ -293,7 +293,9 @@ Description: This is the patient registration for Medical Connect -->
                 <option value="WI">WI</option>
                 <option value="WY">WY</option>
             </select>
-            
+            <tr>
+      <td>&nbsp</td><td id="city_message">&nbsp</td>
+             </tr>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Zip* &nbsp;&nbsp;&nbsp;
             <input type="text" 
                     size="5"
@@ -520,7 +522,6 @@ Description: This is the patient registration for Medical Connect -->
                     name="password"
                     title="Password must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
                     required
-                    oninput="passwordinput()"
                     onfocus="passwordinput()"
                     onblur="passwordinput()"
                     oninput="this.setCustomValidity('')"
@@ -561,7 +562,6 @@ Description: This is the patient registration for Medical Connect -->
                 title="Password must match." 
                 required
                 onfocus="passwordmatch()"
-                oninput="passwordmatch()"
                 onblur="passwordmatch()"
                 oninput="passwordmatch()"
                 oninvalid="this.setCustomValidity('Required Field')"
