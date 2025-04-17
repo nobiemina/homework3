@@ -125,16 +125,16 @@ Description: This is the patient registration for Medical Connect -->
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SSN* &nbsp;&nbsp;&nbsp;
                 <input type="password" 
                     size="11"
-                    maxlength="11" 
-                    id="SSN" 
-                    name="SSN" 
-                    title="Must contain 9 digits"
+                    type="password"
+                    id="ssn"
+                    name="ssn"
+                    oninput="formatSSN(this)"
+                    onblur="validatessn()"
+                    onfocus="validatessn()"
                     required
                     oninvalid="this.setCustomValidity('Required Field')"
-                    oninput="this.setCustomValidity('')"
-                    placeholder="SSN"
-                >
-            <span id="SSN_DOB"></td>
+             />
+             <span id="ssnError"></span>
     </tr> 
 
     <tr>
