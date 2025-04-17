@@ -119,6 +119,47 @@ function validatedate() {
   }
 }
 
+function formatSSN(input)
+  {
+    let digits = input.value.replace(/\D/g, ""); 
+    if (digits.length > 9) { 
+      digits = digits.slice(0, 9); 
+    }
+
+    let formatted = "";
+    if (digits.length > 0) {
+      formatted = digits.slice(0, 3);
+    }
+    if (digits.length >= 4) {
+      formatted += "-" + digits.slice(3, 5);
+    }
+    if (digits.length >= 6) {
+      formatted += "-" + digits.slice(5, 9);
+    }
+
+    input.value = formatted;
+  }
+
+function validatessn()
+  {
+    let x = document.getElementById("ssn").value;
+    let digitsOnly = x.replace(/\D/g, "");
+
+    if (digitsOnly.length !== 9) { 
+      document.getElementById("ssnError").innerHTML = "SSN must be exactly 9 digits.";
+      error_flag = 1;
+    }
+    else {
+      if (/^\d{9}$/.test(digitsOnly)) {
+        document.getElementById("ssnError").innerHTML = "";
+      }
+      else {
+        document.getElementById("ssnError").innerHTML = "SSN must contain only numbers.";
+        error_flag = 1;
+      }
+    }
+  }
+
 
 function validateaddr1(){
   let x = document.getElementById("addr1").value;
