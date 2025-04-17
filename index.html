@@ -83,7 +83,6 @@ Description: This is the patient registration for Medical Connect -->
                     placeholder="MI"
                     onblur="validateMI()"
                     onfocus="validateMI()"
-                    oninput= "validateMI()"
             >
 
             <input type="text"
@@ -94,7 +93,6 @@ Description: This is the patient registration for Medical Connect -->
                     title="Minumum 2 characters; only letters, spaces, &quot-&quot and ' allowed."
                     required
                     onblur="validatelastname()"
-                    oninvalid="this.setCustomValidity('Required Field')"
                     onfocus="validatelastname()"
                     pattern="[A-Za-z-2-5]{0,}"
                     placeholder="Last Name"
