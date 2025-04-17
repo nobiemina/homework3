@@ -97,8 +97,7 @@ function validatelastname()
   }
 
 
-function validatedate()
-{
+function validatedate() {
   let x = document.getElementById("DOB").value;
   let inputDate = new Date(x);
   let today = new Date();
@@ -106,16 +105,16 @@ function validatedate()
   earliestDate.setFullYear(today.getFullYear() - 120);
 
   if (x.length === 0) {
-    document.getElementById("date_message").innerHTML = "Date field cannot be empty.";
+    document.getElementById("DOBError").innerHTML = "Date field cannot be empty.";
     error_flag = 1;
   }
   else {
     if (inputDate > today || inputDate < earliestDate || isNaN(inputDate.getTime())) {
-      document.getElementById("date_message").innerHTML = "Date must be within the last 120 years and not in the future.";
+      document.getElementById("DOBError").innerHTML = "Date must be within the last 120 years and not in the future.";
       error_flag = 1;
     }
     else {
-      document.getElementById("date_message").innerHTML = "";
+      document.getElementById("DOBError").innerHTML = "";
     }
   }
 }
