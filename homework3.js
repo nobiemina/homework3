@@ -56,10 +56,10 @@ function validatefirstname()
     }
   else {
     if (x.match(/[a-zA-Z2-5'-]+$/.test(x))) {
-    document.getElementById("fname_message").innerHTML = " ";  
+    document.getElementById("fname_message").innerHTML = "Invalid characters in Field.";  
     }
       else  {
-        document.getElementById("fname_message").innerHTML = "Invalid characters in Field.";
+        document.getElementById("fname_message").innerHTML = "";
         error_flag = 1;
       }
     }
