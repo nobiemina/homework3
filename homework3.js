@@ -51,7 +51,7 @@ function validatefirstname()
   {
   let x = document.getElementById("firstname").value;
   if( x.length<2) { 
-    document.getElementById("fname_message").innerHTML = "Name needs to contain at least 2 characters";  
+    document.getElementById("fname_message").innerHTML = "First name needs to contain at least 2 characters";  
     error_flag = 1;
     }
   else {
