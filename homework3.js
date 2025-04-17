@@ -82,7 +82,7 @@ function validatelastname()
   {
     let x = document.getElementById("lastname").value;
     if( x.length<2) { 
-      document.getElementById("lname_message").innerHTML = "Name needs to contain at least 2 characters.";
+      document.getElementById("lname_message").innerHTML = "Last name needs to contain at least 2 characters.";
       error_flag = 1;  
       }
     else {
