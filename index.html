@@ -209,14 +209,20 @@ Description: This is the patient registration for Medical Connect -->
                     id="addr2" 
                     name="addr2"
                     onfocus="validateaddr2()"
-                    oninvalid="this.setCustomValidity('At least 1 address line Required')"
-                    oninput="validateaddr2()"
+                    onfocus="validateaddr2()"
                     placeholder="Address Line 2"
             >
         <span id="addr2_text"></td>
     </tr>
 
-    <tr> <td>&nbsp;</td> </tr>
+     <tr>
+     <td>&nbsp</td><td id="addr1_message"">&nbsp</td>
+    </tr>
+
+    <tr>
+      <td>&nbsp</td><td id="addr2_message">&nbsp</td>
+    </tr>
+
 
     <tr class="form">
 
@@ -229,8 +235,7 @@ Description: This is the patient registration for Medical Connect -->
                     name="city" 
                     required
                     onblur="validatecity()"
-                    oninvalid="this.setCustomValidity('Required Field')"
-                    oninput="validatecity()"
+                    onfocus="validatecity()"
                     placeholder="City"
             >
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; State* &nbsp;&nbsp;&nbsp;
