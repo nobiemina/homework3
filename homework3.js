@@ -98,9 +98,7 @@ function validatelastname()
   }
 
 function validateaddr1(){
-  x = document.getElementById("addr1").value;
-  console.log(x.value);
-  console.log(x.length);
+  let x = document.getElementById("addr1").value;
     if (x.length < 2 ) {  
       document.getElementById("addr1_message").innerHTML = " Input address here";  
       error_flag = 1; 
@@ -112,9 +110,7 @@ function validateaddr1(){
       console.log(addr1_message);
 }
 function validateaddr2(){
-  x = document.getElementById("addr2").value;
-    console.log(x.value);
-    console.log(x.length);
+  let x = document.getElementById("addr2").value;
     if (x.length < 2 ) {  
       document.getElementById("addr2_message").innerHTML = "Enter something on address line";  
       error_flag = 1; 
@@ -123,7 +119,7 @@ function validateaddr2(){
       else { 
           document.getElementById("addr2_message").innerHTML = "";  
       }
-      console.log(addr1_message);
+      console.log(addr2_message);
 }
 function validatecity() {
   if (document.getElementById("city").value.match(/^[ a-zA-Z3-5'-]+$/)) {
