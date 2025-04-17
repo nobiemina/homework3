@@ -117,7 +117,8 @@ Description: This is the patient registration for Medical Connect -->
                         name="DOB" 
                         title="Cannot be before 1900 or after 2025"
                         required
-                        oninput="this.setCustomValidity('')"
+                        onfocus="validatedate()"
+                        onblur="validatedate()"
                         oninvalid="this.setCustomValidity('Required Field')"
                 > <span id="DOBError"></span>
                 
