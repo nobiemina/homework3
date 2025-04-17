@@ -54,12 +54,12 @@ function validatefirstname()
     document.getElementById("fname_message").innerHTML = "First name needs to contain at least 2 characters";  
     error_flag = 1;
     }
-  else {
+
     if (x.match(/[a-zA-Z2-5'-]+$/.test(x))) {
-    document.getElementById("fname_message").innerHTML = "Invalid characters in Field.";  
+    document.getElementById("fname_message").innerHTML = "";  
     }
       else  {
-        document.getElementById("fname_message").innerHTML = "";
+        document.getElementById("fname_message").innerHTML = "Invalid characters in Field.";
         error_flag = 1;
       }
     }
