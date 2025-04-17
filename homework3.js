@@ -258,36 +258,40 @@ function passwordinput()
   }
 
 function passwordmatch() {
-    x=document.getElementById("password").value;
-    y=document.getElementById("confirmpassword").value;
-    if ( x==y ) 
-    {
-      document.getElementById("password2_text").innerHTML = " ";
-    } else  
-      {
-         document.getElementById("password2_text").innerHTML = "Passwords DO NOT match!";
-         error_flag = 1;
-      }
-    }
-
-function checkform() 
+   function passwordmatch()
   {
-    error_flag = "0";
-    validatefirstname();
-    validateMI();
-    validatelastname();
-    validateaddr1();
-    validateaddr2();
-    validatecity();
-    validatestate();
-    passwordinput();
-    passwordmatch();
-    console.log("Error flag: "+error_flag);
-      if (error_flag == "1")
-      {
-        alert("Please review and fix your errors where needed!");
-      }
-      else {
-        document.getElementById("submit").disabled = false;
-        }
+    let x = document.getElementById("password").value;
+    let y = document.getElementById("confirmpassword").value;
+
+    if (x == y) { 
+      document.getElementById("password2_text").innerHTML = "";
+    } 
+    else {
+      document.getElementById("password2_text").innerHTML = "Passwords DO NOT match!";
+      error_flag = 1;
+    }
   }
+
+
+function checkform() {
+  error_flag = "0";
+
+  validatefirstname();
+  validateMI();
+  validatelastname();
+  validateaddr1();
+  validateaddr2();
+  validatecity();
+  validatestate();
+  passwordinput();
+  passwordmatch();
+
+  console.log("Error flag: " + error_flag);
+
+  if (error_flag === "1") {
+    alert("Please review and fix your errors where needed!");
+  } else {
+    document.getElementById("submit").disabled = false;
+  }
+}
+
