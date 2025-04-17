@@ -96,6 +96,31 @@ function validatelastname()
     }
   }
 
+
+function validatedate()
+{
+  let x = document.getElementById("DOB").value;
+  let inputDate = new Date(x);
+  let today = new Date();
+  let earliestDate = new Date();
+  earliestDate.setFullYear(today.getFullYear() - 120);
+
+  if (x.length === 0) {
+    document.getElementById("date_message").innerHTML = "Date field cannot be empty.";
+    error_flag = 1;
+  }
+  else {
+    if (inputDate > today || inputDate < earliestDate || isNaN(inputDate.getTime())) {
+      document.getElementById("date_message").innerHTML = "Date must be within the last 120 years and not in the future.";
+      error_flag = 1;
+    }
+    else {
+      document.getElementById("date_message").innerHTML = "";
+    }
+  }
+}
+
+
 function validateaddr1(){
   let x = document.getElementById("addr1").value;
     if (x.length < 2 ) {  
