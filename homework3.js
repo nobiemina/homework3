@@ -47,8 +47,7 @@ function review() {
                 }
   }
 }
-function validatefirstname()
-{
+function validatefirstname() {
   let x = document.getElementById("firstname").value;
   if (x.length < 2) { 
     document.getElementById("fname_message").innerHTML = "First name needs to contain at least 2 characters";  
@@ -65,19 +64,19 @@ function validatefirstname()
   }
 }
 
-function validateMI()
-  {
-    let x = document.getElementById("middleinit").value;
-    if( x.length>0) { 
-      if (x.match(/[a-zA-Z ]/.test(x))) {
+function validateMI() {
+  let x = document.getElementById("middleinit").value;
+  if (x.length > 0) { 
+    if (/^[a-zA-Z ]$/.test(x)) {
       document.getElementById("mi_message").innerHTML = "";  
-      }
-      else  {
-        document.getElementById("mi_message").innerHTML = "Invalid characters in Field.";
-        error_flag = 1;
-      }
+    }
+    else {
+      document.getElementById("mi_message").innerHTML = "Invalid characters in Field.";
+      error_flag = 1;
     }
   }
+}
+
 
 function validatelastname()
   {
